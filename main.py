@@ -63,7 +63,7 @@ class EG_Task:
         print(image_text)
         # Load each image and create an annotated collage
         images_with_text = []
-        font_path = "/System/Library/Fonts/Supplemental/Arial.ttf"  # Path to the font
+        font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" # font to the path
         font_size = 36  # Set the desired font size
         border_size = 20  # Border size around each image
         padding = 20  # Space between images in the collage
