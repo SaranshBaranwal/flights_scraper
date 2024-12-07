@@ -1,10 +1,9 @@
-name: Run Script 4 Times a Day
+name: Automated Web Scraping Script
 
 on:
-  # schedule:
+  schedule:
   #   # Runs at 00:00, 06:00, 12:00, and 18:00 UTC
-  #   - cron: "0 0,6,12,18 * * *"
-  workflow_dispatch
+    - cron: "0 0,6,12,18 * * *"
 
 jobs:
   run-script:
@@ -19,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.9"  # Specify the Python version you need
+          python-version: "3.9"
 
       # Step 3: Install dependencies and font style
       - name: Install dependencies
@@ -35,14 +34,14 @@ jobs:
       - name: Execute script
         run: python main.py
 
-      # Step 5: Upload the generated collage as an artifact
+      # Step 5: Upload the collage fole as an artifact
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: generate-collage
-          path: task1_*.png  # Matches the naming format in your script
+          path: task1_*.png
 
-      # Step 6: Upload task2 files as artifacts
+      # Step 6: Upload xlsx file as an artifact
       - name: Upload task2 files
         uses: actions/upload-artifact@v3
         with:
