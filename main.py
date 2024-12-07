@@ -291,10 +291,10 @@ class EG_Task:
                         current_cell.font = Font(color="FFFFFF")  # Set font color to white for readability
 
         # Save the styled Excel file
-        excel_file = f"task_2_{self.date}.xlsx"
+        excel_file = f"task2_{self.date}.xlsx"
         wb.save(excel_file)
 
-        print(f"Excel with highlights saved as: {excel_file}")
+        print(f"Excel saved as: {excel_file}")
 
 
 if __name__== "__main__":
