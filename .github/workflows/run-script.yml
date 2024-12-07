@@ -1,9 +1,10 @@
 name: Run Script 4 Times a Day
 
 on:
-  schedule:
-    # Runs at 00:00, 06:00, 12:00, and 18:00 UTC
-    - cron: "0 0,6,12,18 * * *"
+  # schedule:
+  #   # Runs at 00:00, 06:00, 12:00, and 18:00 UTC
+  #   - cron: "0 0,6,12,18 * * *"
+  workflow_dispatch
 
 jobs:
   run-script:
