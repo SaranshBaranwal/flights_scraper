@@ -10,7 +10,7 @@ import requests
 
 class EG_Task:
     def __init__(self):
-        self.date = datetime.utcnow()
+        self.date = datetime.utcnow().strftime("%Y-%m-%d_%H-%M-%S") 
         self.banners_screenshot()
         # self.flight_comparison()
     
