@@ -21,7 +21,7 @@ jobs:
         with:
           python-version: "3.9"  # Specify the Python version you need
 
-      # Step 3: Install dependencies
+      # Step 3: Install dependencies and font style
       - name: Install dependencies
         run: |
           pip install bs4
@@ -29,6 +29,7 @@ jobs:
           pip install pillow
           pip install pandas
           pip install requests
+          sudo apt-get install -y fonts-dejavu
 
       # Step 4: Run the script
       - name: Execute script
