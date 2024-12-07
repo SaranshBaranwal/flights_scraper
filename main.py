@@ -35,7 +35,7 @@ class EG_Task:
         response = requests.get(
             'https://www.expedia.co.in/', 
             headers=headers,
-            timeout=120
+            timeout=60
         )
 
         sp = soup(response.text, "html.parser")
@@ -234,7 +234,8 @@ class EG_Task:
         response = requests.post(
             'https://www.expedia.co.in/graphql',
             headers=headers,
-            json=json_data
+            json=json_data,
+            timeout=60
         )
 
         result = json.loads(response.text)
