@@ -39,5 +39,12 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: generated-collage
+          name: generate-collage
           path: task1_*.png  # Matches the naming format in your script
+
+      # Step 6: Upload task2 files as artifacts
+      - name: Upload task2 files
+        uses: actions/upload-artifact@v3
+        with:
+          name: generate-xlsx
+          path: task2_*.xlsx 
