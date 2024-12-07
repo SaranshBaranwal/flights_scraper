@@ -12,7 +12,7 @@ class EG_Task:
     def __init__(self):
         self.date = datetime.utcnow()
         self.banners_screenshot()
-        self.flight_comparison()
+        # self.flight_comparison()
     
     def banners_screenshot(self):
         headers = {
