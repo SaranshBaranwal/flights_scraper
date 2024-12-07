@@ -37,7 +37,6 @@ class EG_Task:
             headers=headers,
             timeout=120
         )
-        print(response)
 
         sp = soup(response.text, "html.parser")
 
@@ -60,7 +59,6 @@ class EG_Task:
             image_list.append(image_url)
             image_text.append(text)
 
-        print(image_text)
         # Load each image and create an annotated collage
         images_with_text = []
         font_path = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" # font to the path
